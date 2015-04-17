@@ -13,3 +13,4 @@ longURL=$1
 # -f to supress fail messages, -s for silent to supress progress reportingq, remove
 # them for debugging.
 curl -f -s $GoogleURL -H 'Content-Type: application/json' -d "{'longUrl': '$longURL'}" | awk '/id/ { printf $2}' | awk -F\" '{ printf $2 }'
+# If you want the output to be followed by a new line replace the second 'printf' with 'print' in the awk statment
