@@ -16,4 +16,5 @@ data = json.dumps({'longUrl': longURL})
 result = requests.post(GoogleURL, headers={'content-type': 'application/json'}, data=data)
 shortURL=result.json()['id']
 sys.stdout.write(shortURL)
+# If you want the output to be followed by a new line use the following line instead of the previous 'sys.stdout...'
 #print(shortURL)
